@@ -18,14 +18,21 @@
   </head>
 
   <body>
-    <main>
-      <div class="container mt-5">
+    <main >
+      <div class="container mt-5 mb-5">
         <div class="row">
           <div class="col-12">
-            <h1 class="text-center text-secondary">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+            <h1 class="text-center text-secondary">
+              CALCOLA IL PREZZO DEL TUO BIGLIETTO
+            </h1>
           </div>
         </div>
-        <form class="row g-3 d-flex justify-content-center">
+
+        <form
+          data-bitwarden-watching="1"
+          class="row g-3 d-flex justify-content-center"
+          onsubmit="userHasfinishDateCompletion(event)"
+        >
           <div class="col-md-3">
             <label for="nameSurname" class="form-label">Nome Cognome</label>
             <input type="text" class="form-control" id="nameSurname" />
@@ -36,7 +43,6 @@
             >
             <input type="text" class="form-control" id="kmdaPercorrere" />
           </div>
-
           <div class="col-md-3">
             <label for="inputState" class="form-label">Fascia di età</label>
             <select id="inputState" class="form-select">
@@ -45,11 +51,35 @@
             </select>
           </div>
 
-          <div class="col-12 d-flex justify-content-center">
+          <div class="d-flex justify-content-center">
             <button type="submit" class="btn btn-primary">Genera</button>
-            <button type="submit" class="btn btn-primary">Anulla</button>
           </div>
         </form>
+      </div>
+      <!---second form-->
+      <div class="container mt-5">
+        <div class="row d-flex justify-content-between border d-none">
+          <div class="col-2 bg-secondary ">
+            <h3>PASSEGERO</h3>
+            <p>Hanna Stoichyk</p>
+          </div>
+          <div class="col-2">
+            <p>Offerta</p>
+            <p>Biglietto standart</p>
+          </div>
+          <div class="col-2">
+            <p>Carozza</p>
+            <p>5</p>
+          </div>
+          <div class="col-2">
+            <p>Codice CP</p>
+            <p>91478</p>
+          </div>
+          <div class="col-2">
+            <p>Costo biglietto</p>
+            <p>2.10 &#8364;</p>
+          </div>
+        </div>
       </div>
     </main>
 
